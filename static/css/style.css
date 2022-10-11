@@ -1,0 +1,165 @@
+body, html{
+    background-color: #070707;
+    font-family: larken;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+::selection {
+    background-color: #DC1E3D;
+    /* color: #212121; */
+}
+
+button {
+    font-family: larken;
+}
+
+/* INTRO OVERLAY */
+
+#intro-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #070707;
+    position: fixed;
+    z-index: 10;
+    transition: opacity .25s ease-in-out;
+    /* display: none; */
+}
+
+#intro-overlay.fadeOut {
+    opacity: 0;
+}
+
+#intro-overlay.remove {
+    display: none;
+}
+
+#inner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+}
+
+#strxngers-logo{
+    width: 400px;
+}
+#entersite-btn {
+    padding: 15px;
+    font-size: 20px;
+    width: 250px;
+    color: white;
+    background-color: #DC1E3D;
+    border: 0px;
+    margin-top: 100px;
+}
+
+#entersite-btn:hover{
+    background-color: #8a1226;
+    cursor: pointer;
+}
+
+#slogan {
+    margin: 0px;
+}
+
+
+
+/* Main Content */
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #070707;
+    height: 55px;
+}
+
+#header-logo {
+    width: 200px;
+    height: 80px;
+}
+
+#content-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-top: 50px; */
+    justify-content: center;
+    color: white;
+    height: calc(100vh - 80px);
+    background-image: url('/static/imgs/city.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: 1250px; */
+}
+
+#img-placehold {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #DC1E3D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#product-title {
+    margin: 50px 0px 0px 0px;
+}
+
+#desc-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#price{
+    margin: 20px 0px 5px 0px;
+}
+#buy-btn {
+    padding: 15px;
+    font-size: 20px;
+    width: 150px;
+    color: white;
+    background-color: #DC1E3D;
+    border: 0px;
+}
+
+#buy-btn:hover{
+    background-color: #8a1226;
+    cursor: pointer;
+}
+
+
+
+@font-face {
+    font-family: 'larken';
+    src: local('rounded'), url('/static/css/fonts/larken.ttf') format("truetype");
+}
+
+
+
+@media screen and (min-width: 768px) {
+    #strxngers-logo{
+        width: 600px;
+    }
+    #slogan{
+        font-size: 25px;
+    }
+    #product-title{
+        font-size: 55px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #product-title{
+        font-size: 75px;
+    }
+}
