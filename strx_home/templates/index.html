@@ -11,14 +11,16 @@
     <link rel="icon" href="{% static 'imgs/favicon.svg' %}">
 </head>
 <body>
-
+    <div class="innercursor"></div>
+    <div class="outercursor"></div>
     <div id="intro-overlay">
+        
         <div id="inner-content">
-            <img src="{% static 'imgs/animate.gif' %}" alt="Strxngers Logo" id="strxngers-logo">
+            <img id="strxngers-logo" class="parallax-obj" data-speed="1" src="" alt="Strxngers Logo" style="opacity: 0%;">
  
   
-            <h3 id="slogan">PAIN AND SUFFERING AND OKAY</h3>
-            <button id="entersite-btn">Begin Shopping</button>
+            <h3 id="slogan" class="parallax-obj" data-speed="-1">PAIN AND SUFFERING AND OKAY</h3>
+            <button class="btns" id="entersite-btn">Begin Shopping</button>
         </div>
     </div>
 
@@ -35,7 +37,7 @@
         <div id="desc-wrap">
             <h1 id="product-title">STRXNGERS CLOTHES</h1>
             <h2 id="price">$20.00</h2>
-            <button id="buy-btn">Buy Now</button>
+            <button class="btns" id="buy-btn">Buy Now</button>
         </div>
         
     </div>

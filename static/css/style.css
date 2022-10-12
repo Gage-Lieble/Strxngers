@@ -5,6 +5,7 @@ body, html{
     padding: 0px;
     height: 100vh;
     overflow: hidden;
+    cursor: none;
 }
 
 ::selection {
@@ -15,7 +16,41 @@ body, html{
 button {
     font-family: larken;
 }
+button:hover{
+    cursor: none;
+}
+.innercursor{
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 100px;
+    z-index: 15;
+    position: fixed;
+    display: none;
+    pointer-events: none;
+    transition: width 0.5s, height 0.5s;
+    transform: translate(-50%, -50%);
+    
+}
 
+.grow{
+    width: 50px;
+    height: 50px;
+    transform: width 0.5s, height 0.5;
+    mix-blend-mode:hue;
+}
+.outercursor{
+    content: '';
+    border: 4px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    pointer-events: none;
+    /* transition: 0.1s; */
+}
 /* INTRO OVERLAY */
 
 #intro-overlay {
@@ -49,6 +84,8 @@ button {
 
 #strxngers-logo{
     width: 400px;
+    height: 101px;
+    position: relative;
 }
 #entersite-btn {
     padding: 15px;
@@ -60,13 +97,14 @@ button {
     margin-top: 100px;
 }
 
-#entersite-btn:hover{
-    background-color: #8a1226;
-    cursor: pointer;
-}
+/* #entersite-btn:hover ~ .cursor{
+    transform: scale(6);
+    /* cursor: pointer; 
+/* }  */
 
 #slogan {
     margin: 0px;
+    position: relative;
 }
 
 
@@ -104,7 +142,7 @@ button {
 #img-placehold {
     width: 300px;
     height: 300px;
-    border: 2px solid #DC1E3D;
+    border: 2px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,11 +170,6 @@ button {
     border: 0px;
 }
 
-#buy-btn:hover{
-    background-color: #8a1226;
-    cursor: pointer;
-}
-
 
 
 @font-face {
@@ -149,6 +182,7 @@ button {
 @media screen and (min-width: 768px) {
     #strxngers-logo{
         width: 600px;
+        height: 150px;
     }
     #slogan{
         font-size: 25px;
@@ -158,8 +192,3 @@ button {
     }
 }
 
-@media screen and (min-width: 1366px) {
-    #product-title{
-        font-size: 75px;
-    }
-}
