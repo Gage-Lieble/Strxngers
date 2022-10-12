@@ -30,6 +30,7 @@ button:hover{
     pointer-events: none;
     transition: width 0.5s, height 0.5s;
     transform: translate(-50%, -50%);
+    backdrop-filter: blur(3px);
     
 }
 
@@ -43,7 +44,8 @@ button:hover{
     width: 40px;
     height: 40px;
     transform: width 0.5s, height 0.5;
-    transition: 0s;
+    /* transform: scale(2); */
+    
 }
 .outercursor{
     content: '';
@@ -55,10 +57,16 @@ button:hover{
     transform: translate(-50%, -50%);
     z-index: 15;
     pointer-events: none;
-    transition: 0.01s;
+    transition: width 0.5s, height 0.5s, top 0.01s, left 0.01s;
+
     display: none;
-    
+
 }
+
+
+
+
+
 /* INTRO OVERLAY */
 
 #intro-overlay {
