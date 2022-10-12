@@ -76,8 +76,11 @@ let btns = Array.from(document.querySelectorAll('button'))
 btns.forEach((btn) => {
     btn.addEventListener('mouseover', () => {
         innercusror.classList.add('grow')
+        outercusror.classList.add('shrink')
     })
+    
     btn.addEventListener('mouseleave', () => {
         innercusror.classList.remove('grow')
+        outercusror.classList.remove('shrink')
     })
 })
