@@ -15,7 +15,7 @@
     <div class="outercursor"></div>
     <div id="intro-overlay">
         
-        <div id="inner-content">
+        <div class="fadeInIntro" id="inner-content">
             <img id="strxngers-logo" class="parallax-obj" data-speed="1" src="" alt="Strxngers Logo" style="opacity: 0%;">
  
   
@@ -32,12 +32,17 @@
 
     <div id="content-wrap">
         <div id="img-placehold">
-            this will be an image
+            <img id="img-shirt" src="{% static 'imgs/placeholdshirt.png' %}" alt="Place Holder">
+            <img id="img-splash" src="{% static 'imgs/whitesplash.svg' %}" alt="whitesplash">
         </div>
         <div id="desc-wrap">
-            <h1 id="product-title">STRXNGERS CLOTHES</h1>
+            <h1 id="product-title">STRXNGERS TEE</h1>
             <h2 id="price">$20.00</h2>
-            <button class="btns" id="buy-btn">Buy Now</button>
+            <div id="button-wrap">
+                <button class="btns" id="buy-btn">Add to cart</button>
+                <button class="btns" id="details-btn">Details</button>
+            </div>
+            
         </div>
         
     </div>

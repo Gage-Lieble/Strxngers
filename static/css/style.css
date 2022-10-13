@@ -5,65 +5,21 @@ body, html{
     padding: 0px;
     height: 100vh;
     overflow: hidden;
-    cursor: none;
+    /* cursor: none; */
 }
+
+/* button:hover{
+    cursor: none;
+} */
 
 ::selection {
     background-color: #DC1E3D;
-    /* color: #212121; */
+
 }
 
 button {
     font-family: larken;
 }
-button:hover{
-    cursor: none;
-}
-.innercursor{
-    width: 15px;
-    height: 15px;
-    background-color: white;
-    border-radius: 100px;
-    z-index: 15;
-    position: fixed;
-    display: none;
-    pointer-events: none;
-    transition: width 0.5s, height 0.5s;
-    transform: translate(-50%, -50%);
-    backdrop-filter: blur(3px);
-    
-}
-
-.grow{
-    width: 40px;
-    height: 40px;
-    transform: width 0.5s, height 0.5;
-    mix-blend-mode:hue;
-}
-.outercursor.shrink{
-    width: 40px;
-    height: 40px;
-    transform: width 0.5s, height 0.5;
-    /* transform: scale(2); */
-    
-}
-.outercursor{
-    content: '';
-    border: 4px solid white;
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    z-index: 15;
-    pointer-events: none;
-    transition: width 0.5s, height 0.5s, top 0.01s, left 0.01s;
-
-    display: none;
-
-}
-
-
 
 
 
@@ -79,7 +35,7 @@ button:hover{
     position: fixed;
     z-index: 10;
     transition: opacity .25s ease-in-out;
-    /* display: none; */
+    display: none;
 }
 
 #intro-overlay.fadeOut {
@@ -113,18 +69,23 @@ button:hover{
     margin-top: 100px;
 }
 
-/* #entersite-btn:hover ~ .cursor{
-    transform: scale(6);
-    /* cursor: pointer; 
-/* }  */
+#entersite-btn:hover{
+    background-color: #981a2f;
+ } 
 
 #slogan {
     margin: 0px;
     position: relative;
 }
 
+.fadeInIntro{
+    animation: fadeIn 2s;
+}
 
-
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 /* Main Content */
 
 #header {
@@ -145,23 +106,29 @@ button:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding-top: 50px; */
     justify-content: center;
     color: white;
     height: calc(100vh - 80px);
     background-image: url('/static/imgs/city.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    /* background-size: 1250px; */
 }
 
 #img-placehold {
-    width: 300px;
-    height: 300px;
-    border: 2px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#img-shirt{
+    width: 250px;
+    position: absolute;
+    z-index: 5;
+   
+}
+#img-splash{
+    width: 300px;
+    position: relative;
 
 }
 
@@ -173,9 +140,15 @@ button:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 350px;
 }
 #price{
-    margin: 20px 0px 5px 0px;
+    margin: 20px 0px 15px 0px;
+}
+#button-wrap{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 #buy-btn {
     padding: 15px;
@@ -184,6 +157,22 @@ button:hover{
     color: white;
     background-color: #DC1E3D;
     border: 0px;
+}
+
+#details-btn {
+    padding: 15px;
+    font-size: 20px;
+    width: 150px;
+    color: white;
+    background-color: #070707;
+    border: 0px;
+}
+#buy-btn:hover{
+    background-color: #981a2f;
+}
+
+#details-btn:hover{
+    background-color: #2a2a2a;
 }
 
 
@@ -196,6 +185,12 @@ button:hover{
 
 
 @media screen and (min-width: 768px) {
+    #button-wrap{
+        width: 350px;
+    }
+    #desc-wrap{
+        width: 600px;
+    }
     #strxngers-logo{
         width: 600px;
         height: 150px;
@@ -206,5 +201,65 @@ button:hover{
     #product-title{
         font-size: 55px;
     }
+    
+    #img-shirt{
+        width: 400px;
+    }
+    #img-splash{
+        width: 450px;
+    }
+
 }
 
+@media screen and (min-width: 1366px){
+    .innercursor{
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        border-radius: 100px;
+        z-index: 15;
+        position: fixed;
+        display: none;
+        pointer-events: none;
+        transition: width 0.5s, height 0.5s;
+        transform: translate(-50%, -50%);
+        backdrop-filter: blur(3px);
+        
+    }
+    
+    .grow{
+        width: 40px;
+        height: 40px;
+        transform: width 0.5s, height 0.5;
+        mix-blend-mode:hue;
+    }
+    .outercursor.shrink{
+        width: 40px;
+        height: 40px;
+        transform: width 0.5s, height 0.5;
+    }
+    .outercursor{
+        content: '';
+        border: 4px solid white;
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        z-index: 15;
+        pointer-events: none;
+        transition: width 0.5s, height 0.5s, top 0.03s, left 0.03s;
+        display: none;
+    }
+
+    .clickAnm{
+        animation: cursorClick .5s forwards;
+        
+    }
+    @keyframes cursorClick {
+        0% { width: 40px; height: 40px}
+        50% { width: 25px; height: 25px}
+        100% { width: 40px; height: 40px}
+      }
+    
+}

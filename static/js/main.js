@@ -17,25 +17,15 @@ let shopBtn = document.getElementById('entersite-btn')
 
 shopBtn.addEventListener('click', () => {
     let introCont = document.getElementById('intro-overlay')
+    let prodDesc = document.getElementById('desc-wrap')
+    let prodImg = document.getElementById('img-placehold')
     introCont.classList.add('fadeOut')
+    prodDesc.classList.add('fadeInIntro')
+    prodImg.classList.add('fadeInIntro')
     setTimeout(() => {
         introCont.classList.add('remove')
     }, 175)
 })
-
-// Mouse Parallax
-
-// document.addEventListener('mousemove', parallax)
-// function parallax(e){
-//     this.querySelectorAll('.parallax-obj').forEach(layer => {
-//         const speed = layer.getAttribute('data-speed')
-
-//         const x = (window.innerWidth - e.pageX*speed)/100
-//         const y = (window.innerHeight - e.pageY*speed)/100
-
-//         layer.style.transform = `translateX(${x}px) translateY(${y}px)`
-//     })
-// }
 
 
 // Content
@@ -67,9 +57,10 @@ document.addEventListener('mousemove', (e) => {
     outercusror.style.display = 'block'
 })
         // Remove if cursor leaves page
-// document.addEventListener('mouseout', () => {
-//     cusror.style.display = 'none'
-// })
+document.addEventListener('mouseout', () => {
+    innercusror.style.display = 'none'
+    outercusror.style.display = 'none'
+})
 
 let btns = Array.from(document.querySelectorAll('button'))
 
@@ -78,7 +69,16 @@ btns.forEach((btn) => {
         innercusror.classList.add('grow')
         outercusror.classList.add('shrink')
     })
-    
+    btn.addEventListener('click', () =>{
+        innercusror.classList.add('clickAnm')
+        outercusror.classList.add('clickAnm')
+        
+        setTimeout(() =>{
+            innercusror.classList.remove('clickAnm')
+            outercusror.classList.remove('clickAnm')
+        },500)
+    })
+   
     btn.addEventListener('mouseleave', () => {
         innercusror.classList.remove('grow')
         outercusror.classList.remove('shrink')
