@@ -84,3 +84,42 @@ btns.forEach((btn) => {
         outercusror.classList.remove('shrink')
     })
 })
+
+
+
+// Details Page
+
+let detailsBtn = document.getElementById('details-btn')
+let btnCount = 0
+detailsBtn.addEventListener('click', () =>{
+    btnCount ++
+    let descPage = document.getElementById('details-wrap')
+    let prodTitle = document.getElementById('product-title')
+    let splash = document.getElementById('img-splash')
+    if (detailsBtn.innerHTML == 'Details'){
+        detailsBtn.innerHTML = '<img src="static/imgs/favicon.svg" style="width:20px; position: absolute; filter: invert(100%); ">'
+    }else{
+        detailsBtn.innerHTML = 'Details'
+    }
+ 
+    if (btnCount % 2 == 0 ){
+
+        descPage.classList.remove('details-open')
+        prodTitle.classList.remove('move-title')
+        splash.classList.remove('remove-img')
+    
+        descPage.classList.add('details-close')
+        prodTitle.classList.add('move-title-down')
+        splash.classList.add('add-img')
+    }else{
+
+        descPage.classList.remove('details-close')
+        prodTitle.classList.remove('move-title-down')
+        splash.classList.remove('add-img')
+        
+        descPage.classList.add('details-open')
+        prodTitle.classList.add('move-title')
+        splash.classList.add('remove-img')
+
+    }
+})
