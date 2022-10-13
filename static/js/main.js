@@ -85,6 +85,28 @@ btns.forEach((btn) => {
     })
 })
 
+let radios = Array.from(document.querySelectorAll('label'))
+
+radios.forEach((radio) => {
+    radio.addEventListener('mouseover', () => {
+        innercusror.classList.add('grow')
+        outercusror.classList.add('shrink')
+    })
+    radio.addEventListener('click', () =>{
+        innercusror.classList.add('clickAnm')
+        outercusror.classList.add('clickAnm')
+        
+        setTimeout(() =>{
+            innercusror.classList.remove('clickAnm')
+            outercusror.classList.remove('clickAnm')
+        },500)
+    radio.addEventListener('mouseleave', () => {
+        innercusror.classList.remove('grow')
+        outercusror.classList.remove('shrink')
+    })
+    })
+})
+
 
 
 // Details Page
@@ -122,4 +144,43 @@ detailsBtn.addEventListener('click', () =>{
         splash.classList.add('remove-img')
 
     }
+})
+
+
+
+// Check out Page
+
+let addCartBtn = document.getElementById('buy-btn')
+let exitBuyBtn = document.getElementById('exit-buybtn')
+addCartBtn.addEventListener('click', () =>{
+    let checkoutPage = document.getElementById('buypage-wrap')
+    checkoutPage.classList.remove('fadeOutBuy')
+    checkoutPage.classList.add('fadeInBuy')
+    checkoutPage.style.display = 'flex'
+})
+
+exitBuyBtn.addEventListener('click', () =>{
+    let checkoutPage = document.getElementById('buypage-wrap')
+    checkoutPage.classList.remove('fadeInBuy')
+    checkoutPage.classList.add('fadeOutBuy')
+    innercusror.classList.add('clickAnm')
+    outercusror.classList.add('clickAnm')
+    
+    setTimeout(() => {
+        innercusror.classList.remove('clickAnm')
+        outercusror.classList.remove('clickAnm')
+        checkoutPage.style.display = 'none'
+    }, 500)
+    
+})
+
+exitBuyBtn.addEventListener('mouseover', () => {
+    innercusror.classList.add('grow')
+    outercusror.classList.add('shrink')
+})
+
+
+exitBuyBtn.addEventListener('mouseleave', () => {
+    innercusror.classList.remove('grow')
+    outercusror.classList.remove('shrink')
 })

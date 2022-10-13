@@ -10,3 +10,9 @@ def index(request):
 
   
     return render(request, 'index.html')
+
+def sizechoice(request):
+    choice = request.POST['option']
+    print(request.POST)
+    context = {'choice': choice}
+    return render(request, 'sizechoice.html', context)

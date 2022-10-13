@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strxngers</title>
+    <title>STRXNGERS</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="{% static 'js/main.js' %}" defer></script>
     <link rel="icon" href="{% static 'imgs/favicon.svg' %}">
@@ -65,6 +65,40 @@
             
         </div>
         
+
+        <div id="buypage-wrap">
+            
+            <h3>Select a size</h3>
+            <form id="form" action="{% url 'home:sizechoice' %}" method="POST">
+                {% csrf_token %}
+                
+
+                <div id="sizebtn-wrap" class="wrap-size">
+
+                    <input class="option" id="s-radio" type="radio" name="option" value="s">
+                    <label for="s-radio" class="label">
+                        <p>S</p></label>
+    
+                        <input class="option" id="m-radio" type="radio" name="option" value="m">
+                    <label for="m-radio" class="label">
+                        <p>M</p></label>
+    
+                        <input class="option" id="l-radio" type="radio" name="option" value="l">
+                    <label for="l-radio" class="label">
+                        <p>L</p></label>
+
+                    <input class="option" id="xl-radio" type="radio" name="option" value="xl">
+                    <label for="xl-radio" class="label">
+                        <p>XL</p></label>
+                </div>
+                    <button type="submit">$20 Place order</button>
+                
+                <div id="exit-buybtn" style="padding: 15px 15px 15px 15px;">go back</div>
+            </form>
+            
+            <img id="shirt-buypage" src="{% static 'imgs/placeholdshirt.png' %}" alt="">
+            <img id="doublesplash" src="{% static 'imgs/dblsplash.svg' %}" alt="">
+        </div>
     </div>
     
         
