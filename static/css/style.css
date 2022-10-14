@@ -1,4 +1,7 @@
-body, html{
+/* GLOBAL */
+
+body,
+html {
     background-color: #070707;
     font-family: larken;
     margin: 0px;
@@ -14,14 +17,11 @@ button:hover{
 
 ::selection {
     background-color: #DC1E3D;
-
 }
 
 button {
     font-family: larken;
 }
-
-
 
 /* INTRO OVERLAY */
 
@@ -46,27 +46,6 @@ button {
     display: none;
 }
 
-.remove-img{
-    animation: fadeOutSplash .5s forwards;
-}
-@keyframes fadeOutSplash {
-    0%{ opacity: 100%; }
-    100% { opacity: 25%; }
-}
-.add-img{
-    animation: fadeInImg .5s ;
-    
-}
-
-@keyframes fadeInImg {
-    0% { opacity: 25%; }
-    100% { opacity: 100%; }
-  }
-
-@keyframes fadeOut {
-    0%{ opacity: 100%; }
-    100% { opacity: 0%; }
-}
 
 #inner-content {
     display: flex;
@@ -76,11 +55,12 @@ button {
 
 }
 
-#strxngers-logo{
+#strxngers-logo {
     width: 400px;
     height: 101px;
     position: relative;
 }
+
 #entersite-btn {
     padding: 15px;
     font-size: 20px;
@@ -91,24 +71,20 @@ button {
     margin-top: 100px;
 }
 
-#entersite-btn:hover{
+#entersite-btn:hover {
     background-color: #981a2f;
- } 
+}
 
 #slogan {
     margin: 0px;
     position: relative;
 }
 
-.fadeInIntro{
+.fadeInIntro {
     animation: fadeIn 2s;
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-/* Main Content */
+/* HEADER */
 
 #header {
     display: flex;
@@ -117,7 +93,7 @@ button {
     padding: 10px;
     background-color: #070707;
     height: 55px;
-    
+
 }
 
 #header-logo {
@@ -139,23 +115,37 @@ button {
     overflow-x: hidden;
 }
 
+/* IMAGE PLACEHOLDER */
+
 #img-placehold {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#img-shirt{
+#img-shirt {
     width: 250px;
     position: absolute;
     z-index: 5;
-   
+
 }
-#img-splash{
+
+#img-splash {
     width: 300px;
     position: relative;
 
 }
+
+.remove-img {
+    animation: fadeOutSplash .5s forwards;
+}
+
+.add-img {
+    animation: fadeInImg .5s;
+
+}
+
+/* PRODUCT INFORMAION */
 
 #product-title {
     margin: 50px 0px 0px 0px;
@@ -169,56 +159,45 @@ button {
     width: 350px;
 }
 
-#details-wrap{
+.move-title {
+    animation: moveTitle .6s forwards;
+    z-index: 15;
+
+}
+
+.move-title-down {
+    animation: moveTitleDown .6s forwards;
+
+}
+
+#price {
+    margin: 20px 0px 15px 0px;
+}
+
+/* DETAILS  */
+
+#details-wrap {
     width: 300px;
     position: absolute;
-    
+
 }
-.details-wrap-class{
+
+.details-wrap-class {
     display: none;
 }
 
-#details-wrap.details-open{
+#details-wrap.details-open {
     display: block;
     animation: moveDetails .6s forwards;
     z-index: 15;
 }
-.move-title{
-    animation: moveTitle .6s forwards;
-    z-index: 15;
-    
+
+.details-close {
+    animation: fadeOut .6s forwards;
+
 }
 
-.details-close{
-    animation: closeDetails .6s forwards;
-   
-}
-.move-title-down{
-    animation: moveTitleDown .6s forwards;
-   
-}
-
-@keyframes moveTitle {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-160px); }
-}
-  @keyframes moveDetails {
-    0% { transform: translateY(100px); opacity: 0%; }
-    25% {opacity: 0%;}
-    100% { transform: translateY(-60px); opacity: 100%; }
-}
-
-
-
-@keyframes moveTitleDown {
-    0% { transform: translateY(-160px); }
-    100% { transform: translateY(0px); }
-}
-@keyframes closeDetails {
-    0% {  opacity: 100%; }
-    100% { opacity: 0%; }
-}
-#sizes-wrap{
+#sizes-wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -227,7 +206,7 @@ button {
     padding-top: 30px;
 }
 
-#sizes-box{
+#sizes-box {
     background-color: white;
     color: black;
     height: 35px;
@@ -236,7 +215,8 @@ button {
     align-items: center;
     justify-content: center;
 }
-.size-box{
+
+.size-box {
     background-color: white;
     color: black;
     width: 35px;
@@ -244,16 +224,16 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: 0px 10px 0px 0px; */
 }
-#price{
-    margin: 20px 0px 15px 0px;
-}
-#button-wrap{
+
+/* PRODUCT BUTTONS */
+
+#button-wrap {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
 }
+
 #buy-btn {
     padding: 15px;
     font-size: 20px;
@@ -274,21 +254,24 @@ button {
     align-items: center;
     justify-content: center;
 }
-#details-btn>img{
+
+#details-btn>img {
     pointer-events: none;
 }
-#buy-btn:hover{
+
+#buy-btn:hover {
     background-color: #981a2f;
 }
 
-#details-btn:hover{
+#details-btn:hover {
     background-color: #2a2a2a;
 }
 
+/* ADD TO CART PAGE */
 
-
-#buypage-wrap{
+#buypage-wrap {
     background-color: #070707;
+    margin-top: 80px;
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -300,33 +283,38 @@ button {
     overflow: hidden;
     display: none;
 }
-#buypage-wrap>h3{
+
+#buypage-wrap>h3 {
     margin-bottom: 0px;
 }
-#shirt-buypage{
+
+#shirt-buypage {
     width: 90%;
     position: absolute;
     bottom: 0;
     margin-bottom: -125px;
     z-index: 2;
+    display: none;
 }
 
-#doublesplash{
+#doublesplash {
     opacity: 40%;
     bottom: 0;
     width: 450px;
     margin-bottom: -100px;
     position: absolute;
     z-index: 1;
+    display: none;
 }
 
-#form{
+#form {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 200px
 }
-#form>button{
+
+#form>button {
     padding: 10px;
     font-size: 20px;
     width: 175px;
@@ -335,18 +323,23 @@ button {
     border: 0px;
 }
 
-#sizebtn-wrap{
+#form>button:hover {
+    background-color: #981a2f;
+}
+
+#sizebtn-wrap {
     padding: 30px;
     width: 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.option{
+
+.option {
     display: none;
 }
 
-.label{
+.label {
     content: '';
     display: inline-block;
     background-color: white;
@@ -356,13 +349,15 @@ button {
     z-index: 100;
     overflow-x: hidden;
     cursor: pointer;
-    
+
 }
-.label:hover{
+
+.label:hover {
     background-color: #cacaca;
     cursor: none;
 }
-#sizebtn-wrap>label>p{
+
+#sizebtn-wrap>label>p {
     display: flex;
     margin: 0px;
     height: 40px;
@@ -370,20 +365,20 @@ button {
     justify-content: center;
 }
 
-.wrap-size input[type='radio']:checked+label{
+.wrap-size input[type='radio']:checked+label {
     background-color: #DC1E3D;
     color: white;
 }
 
-.fadeInBuy{
+.fadeInBuy {
     animation: fadeIn .5s;
 }
 
-.fadeOutBuy{
+.fadeOutBuy {
     animation: fadeOut .5s;
 }
 
-#placeorder-wrap{
+#placeorder-wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -392,32 +387,171 @@ button {
 
 }
 
+#exit-buybtn:hover {
+    color: #cacaca;
+}
+
+/* FONTS */
 
 @font-face {
     font-family: 'larken';
     src: local('rounded'), url('/static/css/fonts/larken.ttf') format("truetype");
 }
 
+/* ANIMATIONS */
 
+@keyframes fadeOutSplash {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 25%;
+    }
+}
+
+@keyframes fadeInImg {
+    0% {
+        opacity: 25%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveTitle {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-160px);
+    }
+}
+
+@keyframes moveTitleDown {
+    0% {
+        transform: translateY(-160px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes moveDetails {
+    0% {
+        transform: translateY(100px);
+        opacity: 0%;
+    }
+
+    25% {
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translateY(-60px);
+        opacity: 100%;
+    }
+}
+
+/* MEDIA QUERIES */
 
 @media screen and (min-width: 768px) {
+    /* INTRO */
+    #strxngers-logo {
+        width: 600px;
+        height: 150px;
+    }
 
-    #sizebtn-wrap{
+    #slogan {
+        font-size: 25px;
+    }
+
+    /* PLACEHOLDER IMGS */
+
+    #img-shirt {
+        width: 400px;
+    }
+
+    #img-splash {
+        width: 450px;
+    }
+
+    /* DETAILS */
+
+    #details-wrap {
+        width: 400px;
+        font-size: 20px;
+    }
+
+    #sizes-wrap {
+        width: 400px;
+        padding-top: 20px;
+        justify-content: space-between;
+    }
+
+    .size-box {
+        padding: 10px;
+        width: 35px;
+        height: 35px;
+        display: flex;
+    }
+
+    #sizebtn-wrap {
         width: 350px;
     }
-    .label{
+
+    #product-title {
+        font-size: 55px;
+    }
+
+    #desc-wrap {
+        width: 600px;
+    }
+
+    #button-wrap {
+        width: 350px;
+    }
+
+    /* BUY PAGE */
+
+    .label {
         width: 75px;
         height: 75px;
     }
-    #sizebtn-wrap>label>p{
+
+    #sizebtn-wrap>label>p {
         height: 75px;
         font-size: 25px;
     }
-    #buypage-wrap>h3{
+
+    #buypage-wrap>h3 {
         font-size: 25px;
     }
-    
-    #form>button{
+
+    #form>button {
         padding: 20px;
         font-size: 20px;
         width: 275px;
@@ -426,86 +560,50 @@ button {
         border: 0px;
         font-size: 25px;
     }
-    #exit-buybtn{
+
+    #exit-buybtn {
         font-size: 20px;
     }
 
-    #shirt-buypage{
-        
+    #shirt-buypage {
+
         margin-bottom: -325px;
     }
-    
-    #doublesplash{
-        margin-bottom: -300px;
-        width: 1000px;
-    }
 
-
-
-    @keyframes moveTitleDown {
-        0% { transform: translateY(-200px); }
-        100% { transform: translateY(0px); }
-    }
-    
-    #details-wrap{
-        width: 400px;
-        font-size: 20px;
-    }
-
-    #sizes-wrap{
-        width: 400px;
-        padding-top: 20px;
-        justify-content: space-between;
-    }
-
-    .size-box{
-        padding: 10px;
-        width: 35px;
-        height: 35px;
-        display: flex;
-    }
-
+    /* MEDIA QUEREY ANIM */
 
     @keyframes moveTitle {
-        0% { transform: translateY(0px); }
-        100% { transform: translateY(-200px); }
-    }
-    #button-wrap{
-        width: 350px;
-    }
-    #desc-wrap{
-        width: 600px;
-    }
-    #strxngers-logo{
-        width: 600px;
-        height: 150px;
-    }
-    #slogan{
-        font-size: 25px;
-    }
-    #product-title{
-        font-size: 55px;
-    }
-    
-    #img-shirt{
-        width: 400px;
-    }
-    #img-splash{
-        width: 450px;
+        0% {
+            transform: translateY(0px);
+        }
+
+        100% {
+            transform: translateY(-200px);
+        }
     }
 
+    @keyframes moveTitleDown {
+        0% {
+            transform: translateY(-200px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
 }
 
-@media screen and (min-width: 1366px){
+@media screen and (min-width: 1366px) {
+    /* BUY PAGE */
 
-
-
-
-    #shirt-buypage{
+    #shirt-buypage {
         width: 700px;
         margin-bottom: -350px;
     }
-    .innercursor{
+
+    /* CURSOR */
+
+    .innercursor {
         width: 15px;
         height: 15px;
         background-color: white;
@@ -517,21 +615,23 @@ button {
         transition: width 0.5s, height 0.5s;
         transform: translate(-50%, -50%);
         backdrop-filter: blur(3px);
-        
+
     }
-    
-    .grow{
+
+    .grow {
         width: 40px;
         height: 40px;
         transform: width 0.5s, height 0.5;
-        mix-blend-mode:hue;
+        mix-blend-mode: hue;
     }
-    .outercursor.shrink{
+
+    .outercursor.shrink {
         width: 40px;
         height: 40px;
         transform: width 0.5s, height 0.5;
     }
-    .outercursor{
+
+    .outercursor {
         content: '';
         border: 4px solid white;
         width: 50px;
@@ -545,14 +645,28 @@ button {
         display: none;
     }
 
-    .clickAnm{
+    .clickAnm {
         animation: cursorClick .5s forwards;
-        
+
     }
+
+    /* MEDIA QUEREY ANIM */
+
     @keyframes cursorClick {
-        0% { width: 40px; height: 40px}
-        50% { width: 25px; height: 25px}
-        100% { width: 40px; height: 40px}
-      }
-    
+        0% {
+            width: 40px;
+            height: 40px
+        }
+
+        50% {
+            width: 25px;
+            height: 25px
+        }
+
+        100% {
+            width: 40px;
+            height: 40px
+        }
+    }
+
 }
