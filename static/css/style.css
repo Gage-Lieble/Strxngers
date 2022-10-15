@@ -109,7 +109,7 @@ button {
     justify-content: center;
     color: white;
     height: calc(100vh - 80px);
-    background-image: url('/static/imgs/city.jpg');
+    /* background-image: url('/static/imgs/city.jpg'); */
     background-repeat: no-repeat;
     background-position: center;
     overflow-x: hidden;
@@ -148,7 +148,7 @@ button {
 /* PRODUCT INFORMAION */
 
 #product-title {
-    margin: 50px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
     z-index: 15;
 }
 
@@ -157,6 +157,7 @@ button {
     flex-direction: column;
     align-items: center;
     width: 350px;
+  
 }
 
 .move-title {
@@ -317,7 +318,7 @@ button {
 #form>button {
     padding: 10px;
     font-size: 20px;
-    width: 175px;
+    width: 200px;
     color: white;
     background-color: #DC1E3D;
     border: 0px;
@@ -325,6 +326,9 @@ button {
 
 #form>button:hover {
     background-color: #981a2f;
+}
+#form>h3{
+    margin: 0px;
 }
 
 #sizebtn-wrap {
@@ -471,7 +475,7 @@ button {
     }
 
     100% {
-        transform: translateY(-60px);
+        transform: translateY(-100px);
         opacity: 100%;
     }
 }
@@ -552,9 +556,9 @@ button {
     }
 
     #form>button {
-        padding: 20px;
+        padding: 15px;
         font-size: 20px;
-        width: 275px;
+        width: 250px;
         color: white;
         background-color: #DC1E3D;
         border: 0px;
@@ -591,10 +595,35 @@ button {
             transform: translateY(0px);
         }
     }
+
+    @keyframes moveDetails {
+        0% {
+            transform: translateY(100px);
+            opacity: 0%;
+        }
+    
+        25% {
+            opacity: 0%;
+        }
+    
+        100% {
+            transform: translateY(-110px);
+            opacity: 100%;
+        }
+    }
 }
 
 @media screen and (min-width: 1366px) {
     /* BUY PAGE */
+
+    #form>button {
+        padding: 15px;
+        width: 200px;
+        color: white;
+        background-color: #DC1E3D;
+        border: 0px;
+        font-size: 20px;
+    }
 
     #shirt-buypage {
         width: 700px;
