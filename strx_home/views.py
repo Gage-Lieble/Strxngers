@@ -1,4 +1,3 @@
-from itertools import product
 from django.shortcuts import render
 from django.shortcuts import render
 import shopify
