@@ -1,7 +1,8 @@
 # STXNGERS - Punk Streetwear
-[strxngers.com>](https://dream-stream-capstone.herokuapp.com/)
+[strxngers.com >](https://dream-stream-capstone.herokuapp.com/)
 
-[Mockup version *if shop is unavaliable*](https://www.gagelieble.com/strxngers.com/)
+[Mockup version - *if shop is unavaliable* >](https://www.gagelieble.com/strxngers.com/)
+
 *note a lot of the website's work was done through shopify's code editor so github was not being updated throughout the entirety of this project 
 #### STRXNGERS website by Gage Lieble
 > A website made for a freinds clothing brand
