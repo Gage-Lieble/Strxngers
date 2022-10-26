@@ -13,7 +13,7 @@ STRXNGERS is a punk street wear brand that drops various clothing items such as 
 - Using shopify layouts/api
 - Allowing the strxngers brand owner to update the prouduct images/prices without me 
 - Better javascript animation
-## Featured
+## Features
 #### Base/Crucial Features:
 - Intro sequence (first page user sees with logo and slogan)
 - Product image
