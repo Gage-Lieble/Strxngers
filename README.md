@@ -1,7 +1,7 @@
 # STXNGERS - Punk Streetwear
 [strxngers.com >](https://strxngers.com/password)
 
-[Mockup version - *if shop is unavaliable* >](https://www.gagelieble.com/strxngers.html/)
+[Mockup version - *if shop is unavaliable* >](https://www.gagelieble.com/strxngers.html)
 
 *note a lot of the website's work was done through shopify's code editor so github was not being updated throughout the entirety of this project 
 ### STRXNGERS website by Gage Lieble
